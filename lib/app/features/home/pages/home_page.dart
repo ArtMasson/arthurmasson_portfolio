@@ -1,3 +1,4 @@
+import 'package:arthurmasson_portfolio/app/features/home/widgets/weather_list.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,10 +10,9 @@ class HomePage extends StatelessWidget {
           SliverAppBar(
             pinned: true,
             stretch: true,
-            onStretchTrigger: () async {
-              print('Load new data!');
-              // await Server.requestNewData();
-            },
+            // onStretchTrigger: () {
+            //   print('Load new data!');
+            // },
             backgroundColor: Colors.blue[800],
             expandedHeight: 200.0,
             flexibleSpace: FlexibleSpaceBar(
@@ -32,12 +32,13 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 child: Image.network(
-                  'https://images.unsplash.com/photo-1621300810337-8a6ea0261add?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+                  headerImage,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
+          WeeklyForecastList(),
         ],
       ),
     );

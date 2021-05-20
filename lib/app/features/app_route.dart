@@ -2,6 +2,7 @@ import 'package:arthurmasson_portfolio/app/features/avatar_picker/pages/avatar_p
 import 'package:arthurmasson_portfolio/app/features/color_picker/models/design_argument.dart';
 import 'package:arthurmasson_portfolio/app/features/color_picker/pages/color_picker_page.dart';
 import 'package:arthurmasson_portfolio/app/features/home/pages/home_page.dart';
+import 'package:arthurmasson_portfolio/app/features/home/widgets/weather_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -25,6 +26,7 @@ class _AppRouteState extends State<AppRoute> {
     var initialRoute = "/";
 
     return MaterialApp(
+      // scrollBehavior: const ConstantScrollBehavior(),
       debugShowCheckedModeBanner: false,
       initialRoute: initialRoute,
       onGenerateRoute: (settings) {
